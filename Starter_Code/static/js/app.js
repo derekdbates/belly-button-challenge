@@ -83,7 +83,7 @@ function buildCharts(sample) {
     };
 
     let layoutBar = {
-      title: 'OTUs: Top Ten',
+      title: 'Top Ten Bacteria Cultures Found',
       xaxis: {title: 'Sample Values'},
       yaxis: {title: 'OTU ID\'s'},
       yaxis: {autorange: 'reversed'}
@@ -126,8 +126,8 @@ function init() {
 // Function for event listener
 function optionChanged(newSample) {
   // Build charts and metadata panel each time a new sample is selected
-
-}
+  buildCharts(newSample);
+};
 
 // Initialize the dashboard
 init();
